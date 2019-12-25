@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta property="og:type" content="website" />
+  <meta property="og:title" content="EmpowerHerSF" />
+  <meta property="og:description" content="Focuses on providing awareness and funding to local SF women shelters." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/maribelduran/Hacking4Humanity2017/master/web/images/EmpowerHerSF_square.png" />
+  <meta property="fb:app_id" content="128614334435665" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script>
+ </script>
+  <title>Shelters</title>
+</head>
+
+<body>
+<script>
+  /*Initializes and loads the Facebook SDK for Javascript*/
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '128614334435665',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+    /* Twitter widgets.js script*/
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
+
+  <div class="container-fluid">
+     <div class="header">
+      <nav class="navbar">
+        <a class="navbar-brand" href="#"><img id="logo" src="images/EmpowHer-SF.svg"></a>
+        <!--
+        <ul class="nav navbar-nav">
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+        -->
+      </nav>
+    </div>
+    <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content text-center">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+
+        <h2>Thank you for your commitment to helping victims of human trafficking in our beloved city of San Francisco.</h2>
+
+        <div class="pink-highlight">
+          <p><span class="emphasize-text">Inspire</span><br> your community to join the movement!</p>
+        </div>
+
+        <div class="social-media">
+         <a id="btn-share-fb" class="social-media-btn"><i class="fa fa-facebook size-40 outline-pink" ></i></a>
+        <a id="button-share-tweet" class="social-media-btn" href="https://twitter.com/intent/tweet?text=I am fighting against Human Trafficking by helping women shelters in SF! Join the movement!&hashtags=StopHumanTrafficking &url=http://www.maribelduran.com/Hacking4Humanity2017" target="_blank"><i class="fa fa-twitter size-40  outline-pink" ></i></a>  
+        <a href="mailto:?subject=Help%20Us%20Fight%20Human%20Trafficking&body=EmpowerHerSF%20matched me%20with%20SF%20women%20shelters%20that%20need%20household%20items%20that%20I%20am%20willing%20to donate.%20Come%20join%20the%20movement%20to%20fight%20against%20human%20trafficking!%20http://www.maribelduran.com/Hacking4Humanity2017" class="social-media-btn" href=""><i class="fa fa-envelope size-40 outline-pink" aria-hidden="true"></i></a>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+    <div class="row purple-header">
+     <div class="col-md-6 col-md-offset-3">
+        <h2 class="text-center">Here are the shelters that need your help</h2>
+      <div class="hline-bottom"></div>
+        <p id="description" class="text-center description">
+          You selected: <span id="shelterNeedsSelection"></span>
+         </p>
+      </div>
+     <div class="row">
+      <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3  text-center">
+        <a href="index.html" class="btn">RUN ANOTHER MATCH</a>
+     </div>
+     <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3  text-center">
+       <a id="settingsButton"  class="btn" data-toggle="modal" data-target="#myModal">INSPIRE OTHERS</a>
+     </div>
+
+    </div>
+   </div>
+
+    <div id="shelter-list" class="row action">
+    </div>
+
+  </div><!--container-fluid -->
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <script type="text/javascript" src="js/results.js"></script>
+</body>
+</html>
